@@ -17,24 +17,6 @@
     Deny from all
 </FilesMatch>
 
-# Protect config directory
-<Directory "config">
-    Order allow,deny
-    Deny from all
-</Directory>
-
-# Protect includes directory
-<Directory "includes">
-    Order allow,deny
-    Deny from all
-</Directory>
-
-# Protect logs directory
-<Directory "logs">
-    Order allow,deny
-    Deny from all
-</Directory>
-
 # Enable URL rewriting
 RewriteEngine On
 
@@ -88,4 +70,4 @@ ErrorDocument 500 /500.php
 RedirectMatch 404 /\.git
 
 # Limit file upload size
-LimitRequestBody 10485760 
+LimitRequestBody 10485760
